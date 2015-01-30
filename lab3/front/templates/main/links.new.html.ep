@@ -1,0 +1,11 @@
+% layout 'default';
+% title 'Add link';
+%# id, company_id, name, salary, requirements, create
+<form action="/links" method="POST" >
+  Company ID:<br>
+  %= text_field 'c_id', value => $c_id
+
+  <br>Aircraft ID:<br>
+  %= text_field 'a_id', value => ''
+  <input type="submit" name="button" value="Add">
+</form>

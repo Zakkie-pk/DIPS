@@ -1,0 +1,11 @@
+% layout 'default';
+% title "Aircrafts on page `$page'";
+
+<% for my $a (@{ $info }) { %>
+<a href = '/resources/aircrafts/<%= $a->{id} %>'>
+	<%= "$a->{name}, roominess: $a->{roominess}, distance: $a->{distance} km" %>
+</a><br/>
+<% } %>
+
+<a href = '/resources/aircrafts?p=<%= $page - 1 %>'> Prev page </a>
+<a href = '/resources/aircrafts?p=<%= $page + 1 %>'> Next page </a>

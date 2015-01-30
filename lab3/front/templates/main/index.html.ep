@@ -1,0 +1,13 @@
+% layout 'default';
+% title 'Main page';
+
+<a href='/login'>Login</a><br>
+<a href='/logout'>Logout</a><br>
+<a href='/me'>Me</a><br><br>
+
+<a href='/users'>Add user</a><br>
+<a href='/companies_form'>Add company</a><br>
+<a href='/aircrafts_form'>Add aircraft</a><br><br>
+
+<a href='/companies?button=Select'>Select companies</a><br>
+<a href='/aircrafts?button=Select'>Select aircrafts</a><br>

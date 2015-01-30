@@ -1,0 +1,13 @@
+% layout 'default';
+% title 'Company registration';
+<form action="/companies" method="POST" >
+  Name:<br>
+  %= text_field 'c_name'
+  <br>
+
+  Country:<br>
+  %= text_field 'c_country'
+  <br>
+
+  <input type="submit" name="button" value="Add">
+</form>

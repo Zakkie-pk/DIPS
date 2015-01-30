@@ -1,0 +1,25 @@
+% layout 'default';
+% title 'User registration';
+<form action="/users" method="POST" >
+  % if (param 'login') {
+    <b>Wrong arguments, please try again.</b><br>
+  % }
+
+  Login:<br>
+  %= text_field 'login'
+  <br>
+
+  Password:<br>
+  %= password_field 'pass'
+  <br>
+
+  Email:<br>
+  %= text_field 'email'
+  <br>
+
+  Country:<br>
+  %= text_field 'country'
+  <br>
+
+  <input type="submit" value="Apply">
+</form>

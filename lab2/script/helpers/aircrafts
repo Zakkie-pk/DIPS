@@ -1,0 +1,10 @@
+#!/bin/sh
+
+source ./defines
+
+TOKEN=$1
+PAGE=$2
+
+URL="http://127.0.0.1:3000/resources/aircrafts.json?p=$PAGE"
+
+curl -H "Authorization: Bearer $TOKEN" "$URL"

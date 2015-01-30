@@ -1,0 +1,17 @@
+% layout 'default';
+% title 'Companies';
+
+%# prev, next, list_ref
+
+% for my $company (@{$list_ref}) {
+	id: <%= $company->{id} %> <br/>
+	name: <%= $company->{name} %> <br/>
+%#    aircrafts: <%= my @info = map { "'ID: $_->{id}, Name: $_->{name}'" } @{$company->{aircrafts}}; %> <br/>
+%   my @info = map { "'ID: $_->{id}, Name: $_->{name}'" } @{$company->{aircrafts}};
+    aircrafts: <%= join(", ", @info) %> <br/>
+	<a href="/companies?button=Select&c_id=<%= $company->{id} %>"> detail </a><br/>
+	------------------------------ <br/>
+%}
+
+<a href="/companies?button=Select&page=<%= $prev %>"> prev </a>
+<a href="/companies?button=Select&page=<%= $next %>"> next </a>

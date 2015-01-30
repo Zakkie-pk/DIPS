@@ -1,0 +1,8 @@
+% layout 'default';
+% title "Companies list";
+
+<% for my $c (@{ $info }) { %>
+<a href = '/resources/companies/<%= $c->{id} %>'>
+	<%= "$c->{id}: $c->{name} ($c->{country})" %>
+</a><br/>
+<% } %>

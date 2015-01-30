@@ -1,0 +1,24 @@
+% layout 'default';
+% title 'Main page';
+<form action="/registration" method="POST" >
+  <input type="submit" value="Registration">
+</form>
+<form action="/login" method="POST" >
+  <input type="submit" value="Login">
+</form>
+<form action="/logout" method="POST" >
+  <input type="submit" value="Logout">
+</form>
+<form action="/status" method="GET" >
+  <input type="submit" value="Status">
+</form>
+<form action="/resources/me" method="GET" >
+  <input type="submit" value="Me">
+</form>
+<form action="/resources/aircrafts" method="GET" >
+  <input type="submit" value="Aircrafts">
+</form>
+<form action="/resources/companies" method="GET" >
+  <input type="submit" value="Companies">
+</form>
+

@@ -1,0 +1,20 @@
+% layout 'default';
+% title 'Login';
+<form action="/login" method="POST" >
+  % if (param 'login') {
+    <b>Wrong name or password, please try again.</b><br>
+  % }
+  Login:<br>
+  %= text_field 'login'
+  <br>Password:<br>
+  %= password_field 'pass'
+  <br>
+  %= hidden_field 'redirect' => $redirect
+  <br>
+  % if ($oauth == 1) {
+      <p>Allow application to get access to the information?</p>
+      <input type="submit" value="Allow and login">
+  % } else {
+      <input type="submit" value="Login">
+  % }
+</form>

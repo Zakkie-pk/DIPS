@@ -1,0 +1,9 @@
+#!/bin/sh
+
+source ./defines
+
+TOKEN=$1
+
+URL="http://127.0.0.1:3000/resources/companies.json"
+
+curl -H "Authorization: Bearer $TOKEN" "$URL"

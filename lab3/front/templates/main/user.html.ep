@@ -1,0 +1,9 @@
+% layout 'default';
+% title 'Login';
+% if (not $user_info->{user_id}) {
+	Not authorized user.<br>
+% } else {
+	Login: <%= $user_info->{user_id} %> <br>
+	Email: <%= $user_info->{email} %> <br>
+	Country: <%= $user_info->{country} %> <br>
+% }

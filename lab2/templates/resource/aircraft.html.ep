@@ -1,0 +1,6 @@
+% layout 'default';
+% title 'Aircraft info';
+ID: `<%= $info->{id} %>'<br/>
+NAME: `<%= $info->{name} %>'<br/>
+ROOMINESS: `<%= $info->{roominess} %>'<br/>
+DISTANCE: `<%= $info->{distance} %>'<br/>

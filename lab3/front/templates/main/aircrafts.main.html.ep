@@ -1,0 +1,22 @@
+% layout 'default';
+% title 'Aircraft';
+%# id, company_id, name, salary, requirements, create
+<form action="/aircrafts" method="POST" >
+  ID:<br>
+  %= text_field 'id', value => $id
+
+  <br>Name:<br>
+  %= text_field 'name', value => $name
+  <br>Roominess:<br>
+  %= text_field 'roominess', value => $roominess
+  <br>Distance:<br>
+  %= text_field 'distance', value => $distance
+
+  <br>
+  % if (param 'create') {
+	<input type="submit" name="button" value="Register">
+  % } else {
+	<input type="submit" name="button" value="Update">
+	<input type="submit" name="button" value="Delete">
+  % }
+</form>

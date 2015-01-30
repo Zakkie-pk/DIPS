@@ -1,0 +1,24 @@
+% layout 'default';
+% title 'Company';
+<form action="/companies" method="POST" >
+  ID:<br>
+  %= text_field 'c_id', value => $c_id
+
+  <br>Name:<br>
+  %= text_field 'c_name', value => $c_name
+
+  <br>Country:<br>
+  %= text_field 'c_country', value => $c_country
+
+  <br>Aircrafts:
+% for my $a (@{$aircrafts}) {
+    <a href="/aircrafts?button=Select&id=<%= $a %>"> <%= $a %> </a>
+% }
+  <br>
+
+  <a href="/aircrafts?button=Select&add=1&c_id=<%= $c_id %>"> Add aircraft </a>
+
+  <br>
+  <input type="submit" name="button" value="Update">
+  <input type="submit" name="button" value="Delete">
+</form>

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+. ./service.conf
+
+../backend_aircrafts/script/backend_aircrafts daemon -l "http://*:$SERVICE_AIRCRAFTS_PORT"

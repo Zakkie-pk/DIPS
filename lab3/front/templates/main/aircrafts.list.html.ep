@@ -1,0 +1,17 @@
+% layout 'default';
+% title 'Aircrafts';
+
+%# prev, next, list_ref
+
+% if (ref $list_ref ne 'ARRAY') {
+%	$list_ref = $list_ref->{aircrafts};
+%}
+
+% for my $aircraft (@{$list_ref}) {
+	ID: <%= $aircraft->{id} %> <br/>
+	Name: <%= $aircraft->{name} %> <br/><br\>
+    <a href="/aircrafts?button=Select&id=<%= $aircraft->{id} %>"> Get full info </a><br/>
+	------------------------------ <br/>
+%}
+<a href="/aircrafts?button=Select&page=<%= $prev %>"> prev </a>
+<a href="/aircrafts?button=Select&page=<%= $next %>"> next </a>

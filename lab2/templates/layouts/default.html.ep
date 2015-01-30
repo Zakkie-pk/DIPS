@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<html>
+  <head><title><%= title %></title></head>
+  <body align="center"><%= content %></body>
+</html>

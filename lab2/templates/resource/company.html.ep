@@ -1,0 +1,9 @@
+% layout 'default';
+% title 'Company description';
+ID: `<%= $info->{id} %>'<br/>
+NAME: `<%= $info->{name} %>'<br/>
+COUNTRY: `<%= $info->{country} %>'<br/>
+AIRCRAFTS: </br>
+<% for my $p (@{ $info->{planes} }) { %>
+  <%= "     $p" %> </br>
+<% } %>

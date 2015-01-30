@@ -1,0 +1,17 @@
+% layout 'default';
+% title 'Registration';
+<form action="/registration/apply" method="POST" >
+  % if ($errstr) {
+    <b><%= $errstr %>.</b><br>
+  % }
+  Login:<br>
+  %= text_field 'login'
+  <br>Password:<br>
+  %= password_field 'pass'
+  <br>Email:<br>
+  %= text_field 'email'
+  <br>Country:<br>
+  %= text_field 'country'
+  <br>
+  <input type="submit" value="Register">
+</form>

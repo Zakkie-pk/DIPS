@@ -1,0 +1,14 @@
+% layout 'default';
+% title 'Aircraft';
+<form action="/aircrafts" method="POST" >
+
+  <br>Name:<br>
+  %= text_field 'name', value => ''
+  <br>Roominess:<br>
+  %= text_field 'roominess', value => ''
+  <br>Distance:<br>
+  %= text_field 'distance', value => ''
+
+  <br>
+  <input type="submit" name="button" value="Add">
+</form>
